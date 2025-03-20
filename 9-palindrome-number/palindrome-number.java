@@ -2,7 +2,6 @@ class Solution {
 
     public boolean isPalindrome(int x) {
 
-        int y;
         String str = Integer.toString(x);
         int len = str.length();
         Boolean check=false;
