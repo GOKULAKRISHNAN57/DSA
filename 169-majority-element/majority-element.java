@@ -8,7 +8,9 @@ class Solution {
         for (int i = 1; i < nums.length; i++) {
             if (nums[i] == c) {
                 count++;
-            } else {
+            } 
+            
+            else {
                 count--;
             }
 
