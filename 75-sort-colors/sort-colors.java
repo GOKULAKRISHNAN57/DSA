@@ -3,7 +3,7 @@ class Solution {
 
         int zero= 0;
         int one = 0;
-        int two = 0;
+
         
         for(int i = 0 ; i < nums.length ; i ++ ){
 
@@ -18,17 +18,24 @@ class Solution {
             }
         }
 
-        for (int j = 0; j < nums.length; j++) {
-            if (zero > 0) {
-                nums[j] = 0;
+        for(int j = 0 ; j < nums.length ; j++ ){
+
+            if(zero > 0){
+                nums[j] = 0 ;
                 zero--;
-            } else if (one > 0) {
-                nums[j] = 1;
-                one--;
-            } else {
-                nums[j] = 2;
-                two--;
+
             }
+
+            else if(one > 0){
+                nums[j] = 1 ;
+                one--;
+
+            }
+
+            else{
+                nums[j] = 2 ;
+            }
+            
         }
     }
 }
