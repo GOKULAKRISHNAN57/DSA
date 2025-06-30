@@ -11,13 +11,15 @@ class Solution {
                 small = prices[i];
             }
 
-            if(prices[i] > small){
+            else{
                 profit = prices[i] - small;
+
+                if(net < profit){
+                net = profit;
+                }
             }
 
-            if(net < profit){
-                net = profit;
-            }
+
 
         }
 
