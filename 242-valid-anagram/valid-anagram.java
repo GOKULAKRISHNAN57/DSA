@@ -3,7 +3,7 @@ import java.util.Arrays;
 class Solution {
     public boolean isAnagram(String s, String t) {
 
-        boolean check = true;
+        boolean check = false;
         if(s.length() != t.length()){
             return false;
         }
@@ -17,10 +17,8 @@ class Solution {
         String newstr1 = new String(Array1);
         String newstr2 = new String(Array2);
 
-        for(int i = 0 ; i < newstr1.length() ; i++){
-            if(newstr1.charAt(i) != newstr2.charAt(i)){
-                return false;
-            }
+        if(newstr1.equals(newstr2)){
+            return true;
         }
 
 
