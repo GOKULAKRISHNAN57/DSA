@@ -18,15 +18,12 @@ class Solution {
         ListNode even = head.next;
         ListNode link = even;
 
-        while(odd != null){
+        while(even != null && even.next != null){
             odd.next = even.next;
             odd = even.next;
             even.next = odd.next;
             even = odd.next;
 
-            if(even == null || odd == null || even.next == null || odd.next == null){
-                break;
-            }
         }
 
         odd.next = link;
