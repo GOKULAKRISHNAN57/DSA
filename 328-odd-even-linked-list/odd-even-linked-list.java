@@ -17,8 +17,6 @@ class Solution {
         ListNode odd = head;
         ListNode even = head.next;
         ListNode link = even;
-        ListNode check1;
-        ListNode check2;
 
         while(odd != null){
             odd.next = even.next;
@@ -26,7 +24,7 @@ class Solution {
             even.next = odd.next;
             even = odd.next;
 
-            if(even == null || odd == null || even.next == null){
+            if(even == null || odd == null || even.next == null || odd.next == null){
                 break;
             }
         }
