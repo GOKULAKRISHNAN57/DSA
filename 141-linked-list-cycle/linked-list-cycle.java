@@ -14,6 +14,9 @@ public class Solution {
         if(head == null || head.next == null){
             return false;
         }
+        if(head.next == head){
+            return true;
+        }
 
        ListNode turle = head;
        ListNode hare = turle.next;
