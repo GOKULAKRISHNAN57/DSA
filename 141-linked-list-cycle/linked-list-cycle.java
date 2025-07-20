@@ -21,9 +21,6 @@ public class Solution {
        ListNode turle = head;
        ListNode hare = turle.next;
 
-       boolean check = false;
-
-
        while(turle != hare){
 
         if(turle == head){
@@ -31,15 +28,12 @@ public class Solution {
         }
 
         if(hare == null || hare.next == null){
-            break;
+            return false;
         }
         turle = turle.next;
         hare = hare.next.next;
        }
 
-       if(turle == hare){
-        return true;
-       }
-       return false;
+       return true;
     }
 }
