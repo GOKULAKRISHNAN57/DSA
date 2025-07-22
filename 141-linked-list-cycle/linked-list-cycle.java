@@ -23,10 +23,6 @@ public class Solution {
 
        while(turle != hare){
 
-        if(turle == head){
-            turle = head ;
-        }
-
         if(hare == null || hare.next == null){
             return false;
         }
