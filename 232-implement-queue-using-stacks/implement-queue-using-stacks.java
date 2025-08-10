@@ -29,9 +29,7 @@ public class MyQueue {
     }
     
     public int pop() {
-        if( stack1.isEmpty() ){
-            return -1;
-        }
+
 
         return stack1.pop();
     }
