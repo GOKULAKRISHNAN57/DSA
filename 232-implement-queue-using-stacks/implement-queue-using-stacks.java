@@ -29,15 +29,10 @@ public class MyQueue {
     }
     
     public int pop() {
-
-
         return stack1.pop();
     }
     
     public int peek() {
-        if(stack1.isEmpty()){
-            return -1;
-        }
         return stack1.peek();
     }
     
