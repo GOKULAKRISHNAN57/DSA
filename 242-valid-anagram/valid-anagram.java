@@ -1,27 +1,28 @@
-import java.util.Arrays; 
+import java.util.Arrays;
 
 class Solution {
+
     public boolean isAnagram(String s, String t) {
 
-        boolean check = false;
         if(s.length() != t.length()){
             return false;
         }
 
-        char[] Array1 = s.toCharArray();
-        Arrays.sort(Array1);
+        char[] c1 = s.toCharArray();
+        char[] c2 = t.toCharArray();
 
-        char[] Array2 = t.toCharArray();
-        Arrays.sort(Array2);
+        Arrays.sort(c1);
+        Arrays.sort(c2);
 
-        String newstr1 = new String(Array1);
-        String newstr2 = new String(Array2);
+        String s1 = new String(c1);
+        String t1 = new String(c2);
 
-        if(newstr1.equals(newstr2)){
-            return true;
+        for(int i = 0; i < s1.length(); i++){
+            if(s1.charAt(i) != t1.charAt(i)){
+                return false;
+            }
         }
 
-
-        return check;
+        return true;        
     }
 }
