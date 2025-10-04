@@ -8,12 +8,19 @@ class Solution {
             return false;
         }
 
-        char[] c1 = s.toCharArray();
-        char[] c2 = t.toCharArray();
+        int[] alphabets = new int[26];
 
-        Arrays.sort(c1);
-        Arrays.sort(c2);
+        for(int i = 0; i < s.length(); i++){
+            alphabets[s.charAt(i) - 'a']++;
+            alphabets[t.charAt(i) - 'a']--;
+        }
 
-        return Arrays.equals(c1,c2);     
+        for(int alphabet : alphabets){
+            if(alphabet != 0){
+                return false;
+            }
+        }
+
+        return true;
     }
 }
