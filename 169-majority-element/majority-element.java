@@ -1,29 +1,22 @@
 import java.util.HashMap;
 
 class Solution {
-
     public int majorityElement(int[] nums) {
+        HashMap<Integer,Integer> map = new HashMap<Integer,Integer>();
 
-        int result = nums[0];
-        HashMap<Integer,Integer> map = new HashMap<>();
+        int max = 0;
+        int result = 0;
 
         for(int i = 0; i < nums.length; i++){
 
-            if(!(map.containsKey(nums[i]))){
-                map.put(nums[i],1);
+            map.put(nums[i],map.getOrDefault(nums[i],0)+1);
+
+            if(max < map.get(nums[i])){
+                max = map.get(nums[i]);
+                result = nums[i];
             }
-
-            else{
-                map.put( nums[i], map.get(nums[i])+1 );
-
-                if( ( map.get(nums[i])) > nums.length/2){
-                    result = nums[i];
-                }
-            }
-
         }
 
         return result;
-
     }
 }
